@@ -7,14 +7,20 @@
     <title>Praenuntius Tempestatis App</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city.." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div class="weather-app-data">
+    <div class="weather-app-data">
+      <header>
+        <form class="search-form">
+          <input
+            type="search"
+            class="search-form-input"
+            placeholder="Enter a city.."
+            required
+          />
+          <input type="submit" class="search-form-button" value="Search" />
+        </form>
+      </header>
+
+      <main>
         <div>
           <h1 class="weather-app-city" id="city">Paris</h1>
           <p class="weather-app-details">
@@ -28,8 +34,9 @@
           <div class="weather-app-temperature">12</div>
           <div class="weather-app-unit">°C</div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
+
     <footer>
       This project was coded by
       <a href="https://github.com/LeishaH" target="_blank">Leisha Henry</a>, is
@@ -43,6 +50,7 @@
         >hosted on Netlify</a
       >
     </footer>
+
     <script src="src/index.js"></script>
   </body>
 </html>
