@@ -2,6 +2,7 @@ function refreshWeather(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let detailsElement = document.querySelector(".weather-app-details");
+  let iconElement = document.querySelector(".weather-app-icon");
 
   let temperature = Math.round(response.data.temperature.current);
   let humidity = response.data.temperature.humidity;
@@ -11,14 +12,13 @@ function refreshWeather(response) {
   let hours = date.getHours().toString().padStart(2, "0");
   let minutes = date.getMinutes().toString().padStart(2, "0");
 
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  } else {
-    minutes = minutes.toString();
-  }
-
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+
+  iconElement.innerHTML = `
+    <img src="${response.data.condition.icon_url}" alt="${description}" class="weather-app-icon-img" />
+  `;
+
   detailsElement.innerHTML = `
     ${date.toLocaleDateString("en-US", {
       weekday: "long",
