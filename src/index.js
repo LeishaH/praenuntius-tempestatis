@@ -11,6 +11,12 @@ function refreshWeather(response) {
   let hours = date.getHours().toString().padStart(2, "0");
   let minutes = date.getMinutes().toString().padStart(2, "0");
 
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  } else {
+    minutes = minutes.toString();
+  }
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   detailsElement.innerHTML = `
