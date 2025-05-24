@@ -110,7 +110,6 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  overflow-x: auto;
   margin-top: 30px;
   padding-bottom: 10px;
 }
@@ -118,11 +117,9 @@ main {
 .weather-forecast-day {
   flex: 0 0 auto;
   width: 100px;
-  background: #f9f7fe;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .weather-forecast-date {
